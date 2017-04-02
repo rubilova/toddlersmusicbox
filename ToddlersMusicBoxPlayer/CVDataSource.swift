@@ -143,7 +143,7 @@ class CVDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelega
             
             //collectionView.reloadData()
             //parentViewController.deleteButton.isHidden = true
-            parentViewController.helpButton.setTitle("Help", for: UIControlState.normal)
+            parentViewController.helpButton.setTitle("About", for: UIControlState.normal)
         }
         
         

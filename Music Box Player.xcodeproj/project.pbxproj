@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4117DAB1E4432E800A4C496 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4117DAA1E4432E800A4C496 /* TestViewController.swift */; };
 		A41BB4651E8851DE00686DAA /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BB4641E8851DE00686DAA /* HelpVC.swift */; };
 		A41BB4681E88543700686DAA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A41BB4671E88543700686DAA /* index.html */; };
 		A41BB46A1E89963F00686DAA /* WheelsOnTheBus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A41BB4691E89963F00686DAA /* WheelsOnTheBus.mp3 */; };
@@ -22,6 +21,7 @@
 		A44544771E3BB2E1005A22FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44544761E3BB2E1005A22FC /* AVFoundation.framework */; };
 		A445447D1E3D18CA005A22FC /* MusicItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445447C1E3D18CA005A22FC /* MusicItemVC.swift */; };
 		A445447F1E3D2EB9005A22FC /* MusicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445447E1E3D2EB9005A22FC /* MusicItem.swift */; };
+		A450CACF1E8E67BD00F1C26A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = A450CACE1E8E67BD00F1C26A /* assets */; };
 		A47DCCD71E64AE5F0054308E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47DCCD61E64AE5F0054308E /* Common.swift */; };
 		A47DCCD91E675B570054308E /* PhotoAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47DCCD81E675B570054308E /* PhotoAsset.swift */; };
 		A4A9A8BE1E3E92C100240F8C /* MusicItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A9A8BD1E3E92C100240F8C /* MusicItemTableViewCell.swift */; };
@@ -40,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A4117DAA1E4432E800A4C496 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A41BB4641E8851DE00686DAA /* HelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		A41BB4671E88543700686DAA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		A41BB4691E89963F00686DAA /* WheelsOnTheBus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WheelsOnTheBus.mp3; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		A44544761E3BB2E1005A22FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A445447C1E3D18CA005A22FC /* MusicItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItemVC.swift; sourceTree = "<group>"; };
 		A445447E1E3D2EB9005A22FC /* MusicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItem.swift; sourceTree = "<group>"; };
+		A450CACE1E8E67BD00F1C26A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		A47DCCD61E64AE5F0054308E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		A47DCCD81E675B570054308E /* PhotoAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAsset.swift; sourceTree = "<group>"; };
 		A4A9A8BD1E3E92C100240F8C /* MusicItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +102,7 @@
 		A41BB4661E8852F600686DAA /* help */ = {
 			isa = PBXGroup;
 			children = (
+				A450CACE1E8E67BD00F1C26A /* assets */,
 				A41BB4671E88543700686DAA /* index.html */,
 			);
 			name = help;
@@ -137,7 +138,6 @@
 				A445447C1E3D18CA005A22FC /* MusicItemVC.swift */,
 				A4A9A8C11E3FFA8B00240F8C /* MusicItemsCollectionVC.swift */,
 				A44544671E3BB292005A22FC /* Main.storyboard */,
-				A4117DAA1E4432E800A4C496 /* TestViewController.swift */,
 				A445446A1E3BB292005A22FC /* Assets.xcassets */,
 				A445446C1E3BB292005A22FC /* LaunchScreen.storyboard */,
 				A445446F1E3BB292005A22FC /* Info.plist */,
@@ -276,6 +276,7 @@
 				A4B99C9F1E4CF701004E4B99 /* FreresJacques.mp3 in Resources */,
 				A41BB46C1E899BCB00686DAA /* TwinkleTwinkleLittleStar.mp3 in Resources */,
 				A44544691E3BB292005A22FC /* Main.storyboard in Resources */,
+				A450CACF1E8E67BD00F1C26A /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +350,6 @@
 			files = (
 				A4A9A8C01E3FF56000240F8C /* ImageCollectionViewCell.swift in Sources */,
 				A4B99CCD1E5A424A004E4B99 /* MusicItemExtension.swift in Sources */,
-				A4117DAB1E4432E800A4C496 /* TestViewController.swift in Sources */,
 				A4A9A8C21E3FFA8B00240F8C /* MusicItemsCollectionVC.swift in Sources */,
 				A4A9A8C81E425B5200240F8C /* MusicItemCollectionViewCell.swift in Sources */,
 				A47DCCD91E675B570054308E /* PhotoAsset.swift in Sources */,
@@ -496,7 +496,7 @@
 				INFOPLIST_FILE = ToddlersMusicBoxPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sunady.ToddlersMusicBoxPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunady.TotPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -514,7 +514,7 @@
 				INFOPLIST_FILE = ToddlersMusicBoxPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sunady.ToddlersMusicBoxPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunady.TotPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

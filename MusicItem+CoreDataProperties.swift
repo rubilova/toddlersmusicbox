@@ -2,7 +2,7 @@
 //  MusicItem+CoreDataProperties.swift
 //  
 //
-//  Created by Yelena Rubilova on 2/19/17.
+//  Created by Yelena Rubilova on 4/1/17.
 //
 //  This file was automatically generated and should not be edited.
 //
@@ -18,14 +18,32 @@ extension MusicItem {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var soundId: Int64
     @NSManaged public var sample: String?
-    @NSManaged public var photos: NSSet?
+    @NSManaged public var soundId: Int64
+    @NSManaged public var photos: NSOrderedSet?
 
 }
 
 // MARK: Generated accessors for photos
 extension MusicItem {
+
+    @objc(insertObject:inPhotosAtIndex:)
+    @NSManaged public func insertIntoPhotos(_ value: Photo, at idx: Int)
+
+    @objc(removeObjectFromPhotosAtIndex:)
+    @NSManaged public func removeFromPhotos(at idx: Int)
+
+    @objc(insertPhotos:atIndexes:)
+    @NSManaged public func insertIntoPhotos(_ values: [Photo], at indexes: NSIndexSet)
+
+    @objc(removePhotosAtIndexes:)
+    @NSManaged public func removeFromPhotos(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInPhotosAtIndex:withObject:)
+    @NSManaged public func replacePhotos(at idx: Int, with value: Photo)
+
+    @objc(replacePhotosAtIndexes:withPhotos:)
+    @NSManaged public func replacePhotos(at indexes: NSIndexSet, with values: [Photo])
 
     @objc(addPhotosObject:)
     @NSManaged public func addToPhotos(_ value: Photo)
@@ -34,11 +52,9 @@ extension MusicItem {
     @NSManaged public func removeFromPhotos(_ value: Photo)
 
     @objc(addPhotos:)
-    @NSManaged public func addToPhotos(_ values: NSSet)
+    @NSManaged public func addToPhotos(_ values: NSOrderedSet)
 
     @objc(removePhotos:)
-    @NSManaged public func removeFromPhotos(_ values: NSSet)
-    
-    
+    @NSManaged public func removeFromPhotos(_ values: NSOrderedSet)
 
 }

@@ -29,6 +29,7 @@ class MusicItemViewController: UIViewController, UIImagePickerControllerDelegate
     var selectedSoundURL: URL?
     var selectedRecordingURL: URL?
     var selectedPhotos: Array<PhotoAsset> = []
+    var didSelectPhotos: Bool = false
     
     //var recordButton: UIButton!
     var recordingSession: AVAudioSession!
@@ -109,6 +110,7 @@ class MusicItemViewController: UIViewController, UIImagePickerControllerDelegate
     @IBAction func selectImageFromPhotoLibrary(_ sender: Any) {
         let pickerController = DKImagePickerController()
         pickerController.allowsLandscape = true
+        pickerController.showsCancelButton = true
         var selectedAssets: Array<DKAsset> = []
         for each in selectedPhotos {
             let fetchOptions = PHFetchOptions()
@@ -122,9 +124,10 @@ class MusicItemViewController: UIViewController, UIImagePickerControllerDelegate
         pickerController.defaultSelectedAssets = selectedAssets
         
         pickerController.didSelectAssets = { (assets: [DKAsset]) in
-            print("didSelectAssets")
+            //print("didSelectAssets")
             //var assetsIdentifiers: Array<String> = []
             self.selectedPhotos = []
+            self.didSelectPhotos = true
             self.collectionView.reloadData()
             for each in assets {
                 /*each.fetchOriginalImage(false){
@@ -368,7 +371,11 @@ class MusicItemViewController: UIViewController, UIImagePickerControllerDelegate
             /*if selectedSample == nil {} else {
                 musicItem.sample = selectedSample
             }*/
-            musicItem.save(name: name, photos: selectedPhotos, soundId: selectedSoundId, sample: selectedSample)
+            if didSelectPhotos {
+                musicItem.save(name: name, photos: selectedPhotos, soundId: selectedSoundId, sample: selectedSample)
+            } else {
+                musicItem.save(name: name, soundId: selectedSoundId, sample: selectedSample)
+            }
             //MusicItem.save(name: name, photos: selectedPhoto, soundId: selectedSoundId, sample: "recording.m4a")
             
         }else { // new item

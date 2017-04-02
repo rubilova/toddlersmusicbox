@@ -86,7 +86,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate
             // Load the sample data.
             loadSampleMusicItems()
         }*/
-        tapImage.addTarget(self, action: "imageTapped")
+        tapImage.addTarget(self, action: #selector(ViewController.imageTapped))
         imageView.addGestureRecognizer(tapImage)
         
         if let musicItem = musicItem {
@@ -130,7 +130,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate
             /*if musicItem.photo.count>0 {
                 imageView.image = musicItem.photo[0]
             }*/
-            if (musicItem.photos?.allObjects.count)!>1 {
+            if (musicItem.photos?.array.count)!>1 {
                 
                 gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             } //TODO
@@ -144,6 +144,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func sourceLinkTapped(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "http://freekidsmusic.com/") as! URL)
+    }
     func imageTapped(){
         //print("image tapped")
         //self.view.constraints.
@@ -322,7 +325,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate
                 else {
                     currentIndex = 0
                 }
-                let toImageObject = musicItem.photos?.allObjects[currentIndex]
+                let toImageObject = musicItem.photos?.array[currentIndex]
                 let toImage = UIImage(data:(toImageObject as! Photo).value(forKey: "photo") as! Data,scale:1.0)
                 UIView.transition(with: self.imageView,
                                   duration:2,

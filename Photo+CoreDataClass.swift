@@ -2,7 +2,7 @@
 //  Photo+CoreDataClass.swift
 //  
 //
-//  Created by Yelena Rubilova on 3/1/17.
+//  Created by Yelena Rubilova on 4/1/17.
 //
 //  This file was automatically generated and should not be edited.
 //

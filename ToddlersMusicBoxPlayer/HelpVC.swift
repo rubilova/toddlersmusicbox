@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HelpVC: UIViewController
+class HelpVC: UIViewController, UIWebViewDelegate
 {
     
     @IBOutlet var webView: UIWebView!
@@ -18,6 +18,16 @@ class HelpVC: UIViewController
         let url = Bundle.main.url(forResource: "index", withExtension: "html")
         //Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "help") as URL?
         let urlRequest = NSURLRequest(url: url!)
+        
+        self.webView.delegate = self
         self.webView.loadRequest(urlRequest as URLRequest)
+    }
+    
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if navigationType == UIWebViewNavigationType.linkClicked {
+            UIApplication.shared.openURL(request.url!)
+            return false
+        }
+        return true
     }
 }

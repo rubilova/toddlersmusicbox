@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "165791196.jpg",
+      "filename" : "twinkle1x.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "165791196-1.jpg",
+      "filename" : "twinkle2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "165791196-2.jpg",
+      "filename" : "twinkle3x.jpg",
       "scale" : "3x"
     }
   ],

@@ -48,7 +48,7 @@ class PlayerViewController: UIViewController, UIScrollViewDelegate
     @IBAction func helpButtonTapped(_ sender: Any) {
     
         
-        if helpButton.title(for: UIControlState.normal) == "Help" {
+        if helpButton.title(for: UIControlState.normal) == "About" {
             self.performSegue(withIdentifier: "Help", sender: self.helpButton)
         } else {
         dataSourceToBeUpdated?.deleteButtonTapped()
@@ -78,7 +78,7 @@ class PlayerViewController: UIViewController, UIScrollViewDelegate
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        cleanDeletedPhotos() //TODO
+        //cleanDeletedPhotos() //TODO
         scrollingLocked = false
         
         // load data
