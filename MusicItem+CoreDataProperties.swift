@@ -2,9 +2,8 @@
 //  MusicItem+CoreDataProperties.swift
 //  
 //
-//  Created by Yelena Rubilova on 4/1/17.
+//  Created by Yelena Rubilova on 5/23/17.
 //
-//  This file was automatically generated and should not be edited.
 //
 
 import Foundation
@@ -14,13 +13,17 @@ import CoreData
 extension MusicItem {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<MusicItem> {
-        return NSFetchRequest<MusicItem>(entityName: "MusicItem");
+        return NSFetchRequest<MusicItem>(entityName: "MusicItem")
     }
 
+    @NSManaged public var img: String?
+    @NSManaged public var localId: String?
     @NSManaged public var name: String?
-    @NSManaged public var sample: String?
     @NSManaged public var soundId: Int64
+    @NSManaged public var soundURL: String?
+    @NSManaged public var creditLabel: String?
     @NSManaged public var photos: NSOrderedSet?
+    @NSManaged public var playset: Playset?
 
 }
 
